@@ -1,0 +1,134 @@
+.kt_paper_roll {
+  position: relative;
+  min-height: 250px;
+}
+
+#ui {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#ui .roll {
+  position: relative;
+}
+#ui .roll .body {
+  width: 90px;
+  height: 50px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+#ui .roll .side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#ui .roll .side::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  transform: translate(-50%, -50%);
+  border: 3px solid #000;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#ui .roll .front {
+  position: absolute;
+  left: 47px;
+  top: 25px;
+  width: 43px;
+  height: 30px;
+  background: #fff;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  border-top: none;
+  box-sizing: border-box;
+}
+#ui .roll .front .jiguzagu_wrapper {
+  margin-top: 26px;
+}
+#ui .roll .drop_paper_wrapper {
+  position: absolute;
+  left: 47px;
+  top: 52px;
+  width: 43px;
+  height: 120px;
+  overflow: hidden;
+}
+#ui .roll .drop_paper_wrapper .drop_paper {
+  position: absolute;
+  top: -97px;
+  width: 43px;
+  height: 500px;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  box-sizing: border-box;
+  background: #fff;
+  animation: drop 3000ms linear infinite;
+}
+#ui .roll .drop_paper_wrapper .drop_paper .jiguzagu_wrapper.top {
+  margin-top: -4px;
+  transform: rotateZ(180deg);
+}
+#ui .roll .drop_paper_wrapper .drop_paper .jiguzagu_wrapper.bottom {
+  position: absolute;
+  bottom: -4px;
+}
+#ui .roll .jiguzagu_wrapper {
+  display: flex;
+  width: 39px;
+  margin-left: -1px;
+}
+#ui .roll .jiguzagu_wrapper .jiguzagu {
+  width: 8px;
+  height: 8px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  background: #fff;
+  box-sizing: border-box;
+  transform: rotateZ(45deg);
+}
+@keyframes drop {
+  0% {
+    top: -997px;
+  }
+  100% {
+    top: 10%;
+  }
+}
+
+body {
+  background: linear-gradient(
+    -45deg,
+    #8b008b,
+    #483d8b,
+    #db7093,
+    #6a5acd,
+    #800080
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
